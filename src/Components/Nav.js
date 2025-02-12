@@ -27,7 +27,7 @@ const navItems = [
 
 
 
-export default function () {
+function Nav() {
     return (
         <nav>
             <ul>
@@ -40,3 +40,4 @@ export default function () {
 };
 
 export {navItems};
+export default Nav;

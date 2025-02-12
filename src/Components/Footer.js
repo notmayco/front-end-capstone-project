@@ -1,9 +1,9 @@
 import footerLogo from '../assets/footerLogo 1.png'
 import { navItems } from './Nav'
-export default function () {
+function Footer() {
     return(
         <footer>
-            <img src={footerLogo} />
+            <img src={footerLogo} alt='footer logo'/>
             <div>
                 <h1>Doormat Navigation</h1>
                 <ul>
@@ -31,3 +31,5 @@ export default function () {
         </footer>
     )
 }
+
+export default Footer
