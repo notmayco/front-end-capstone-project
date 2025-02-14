@@ -3,6 +3,20 @@
   list-style-type: none;
   color: black;
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1 {
+  font-size: 4rem;
+}
+h2 {
+  font-size: 2.5rem;
+}
+p {
+  font-size: 1.1rem;
+}
+button {
+  font-size: 1rem;
 }
 @font-face {
   font-family: Markazi;
@@ -12,9 +26,14 @@
   font-family: Karla;
   src: url(fonts/Karla-VariableFont_wght.ttf);
 }
+@font-face {
+  font-family: Inika;
+  src: url(fonts/Inika-Regular.ttf);
+}
 
 body {
   margin: 0;
+  width: 100vw;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -25,7 +44,7 @@ body {
 .appcontainer {
   margin: 0;
   display: grid;
-  grid-template-rows: 81px 2325.38px 493px;
+  grid-template-rows: 5.1rem 145rem 30.1rem;
   grid-template-columns: 1fr 1fr;
   grid-template-areas:
   'header nav'
@@ -38,52 +57,52 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 10px;
+  margin-top: 0.7rem;
 }
 
   nav {
     grid-area: nav;
     display: flex;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
   }
     li {
-      font-size: 16px;
+      font-size: 1rem;
       font-family: Karla;
+      font-weight: 350;
       display: inline;
       padding: 10px;
     }
 
-
   main {
     grid-area: main;
-    margin-top: 10px;
+    margin-top: 0.7rem;
   }
 
     .hero {
+      display: flex;
+      justify-content: center;
       background-color: #495E57;
+      min-width: 100vw;
       height: 353.38px;
     }
       .introText {
-        position: relative;
-        left: 17.2%;
-        top: 10%;
-        width: 28%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 20rem;
       }
       .introText  > h1 {
         font-family: Markazi;
-        font-size: 64px;
         color: #F4CE14;
       }
       .introText > h2 {
         font-family: Markazi;
-        font-size: 40px;
         color: white;
         padding-bottom: 25px;
       }
       .introText > p {
         font-family: Karla;
-        font-size: 18px;
         padding-bottom: 25px;
         text-wrap: wrap;
         color: white;
@@ -92,15 +111,12 @@ header {
         font-family: Karla;
         color: black;
         background-color: #F4CE14;
-        border-radius: 16px;
-        font-size: 18px;
-        width: 168px;
-        height: 34px;
+        border-radius: 1rem;
+        width: 13rem;
+        height: 2.1rem;
       }
       .introImg {
-        position: relative;
-        left: 57%;
-        bottom: 71%;
+        margin: 2rem 0 0 2rem;
       }
       .introImg > img {
         border-radius: 16px;
@@ -108,7 +124,6 @@ header {
         height: 430.55px;
         object-fit: cover;
       }
-
 
     .special {
         display: grid;
@@ -118,9 +133,10 @@ header {
         grid-template-areas:
         'text text text'
         'card card card';
+        width: 100%;
     }
       .specialText {
-        margin-top: 112px;
+        margin-top: 7rem;
         grid-area: text;
         display: flex;
         justify-content: space-between;
@@ -128,50 +144,48 @@ header {
       }
       .specialText > h1 {
         font-family: Markazi;
-        font-size: 64px;
       }
       .specialText > button{
-        font-size: 18px;
         font-family: Karla;
         color: black;
         background-color: #F4CE14;
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
         border-radius: 16px;
         border: 0;
-        width: 131px;
-        height: 42px;
+        width: 8.1rem;
+        height: 2.6rem;
       }
 
       .cardGrid{
         grid-area: card;
         display: flex;
-        margin-top: 15px;
+        margin-top: 1rem;
         gap: 7px;
       }
 
       .cardContainer{
         background-color: #D9D9D9;
-        width: 279.86px;
-        height: 405px;
+        width: 17.5rem;
+        height: 26.5rem;
         border-radius: 16px;
       }
       .cardHeading {
         display: flex;
         justify-content: space-between;
         align-content: center;
-        padding: 10px;
+        padding: 1rem;
       }
         .cardHeading > h2 {
-          font-size: 18px;
+          font-size: 1.2rem;
           font-family: Markazi;
         }
         .cardHeading > p {
-          font-size: 16px;
+          font-size: 1rem;
           color: #EE9972;
           font-family: Karla;
         }
       .cardContent {
-        font-size: 16px;
+        font-size: 1rem;
         font-family: Karla;
         display: flex;
         flex-direction: column;
@@ -181,9 +195,9 @@ header {
         padding-inline: 15px;
       }
       .cardContent > div > button {
-        width: 150.36px;
+        width: 9.4rem;
         height: 10px;
-        margin-top: 10px;
+        margin: 1rem 0 0 0.5rem;
         border: 0;
         background-color: inherit;
         text-align: left;
@@ -194,17 +208,487 @@ header {
         align-items: baseline;
       }
       .cardContent > div > button > img {
-        position: relative;
-        left: 5%;
-        top: 2px;
+        margin: 0.5rem 0 0 0.5rem;
         width: 13px;
         height: auto;
       }
 
+    .testimonialsContainer {
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      margin-top: 3.8rem;
+      width: 100%;
+      height: 38.1rem;
+      background-color: #495E57;
+    }
+      .testimonialsContainer > div > h1 {
+        font-family: Markazi;
+        margin-top: 6.8rem;
+        margin-bottom: 6rem;
+        text-align: center;
+        color: white;
+      }
+      .reviewCardContainer {
+        display: flex;
+        gap: 1rem;
+      }
+      .reviewCard{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        gap: 10px;
+        width: 15rem;
+        height: 13.7rem;
+        padding-left: 0;
+        background-color: white;
+        border-radius: 8px;
+      }
+      .reviewCard > img {
+        width: 7.5rem;
+        height: auto;
+        padding-left: 1.3rem;
+        object-fit: cover;
+        margin-bottom: 0.6rem;
+        filter: opacity(0.8);
+      }
+      .reviewContent {
+        padding-left: 1.2rem;
+      }
+      .reviewContent > h2 {
+        font-family: Markazi;
+        font-weight: lighter;
+        font-size: 2.5rem;
+      }
+      .reviewContent > p {
+        font-family: Karla;
+        font-size: 1.3rem;
+      }
+      .reviewPerson{
+        display: grid;
+        grid-template-columns: 3.1rem auto;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+        'person h3'
+        'person p';
+        padding-left: 20px;
+        margin-top: 10px;
+      }
+      .reviewPerson > img {
+        grid-area: person;
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 20px;
+        object-fit: cover;
+      }
+      .reviewPerson > h3 {
+        grid-area: h3;
+        font-weight: 400;
+        font-size: 1rem;
+      }
+      .reviewPerson > p{
+        grid-area: p;
+        font-weight: 300;
+      }
+
+    .aboutContainer {
+      display: flex;
+      justify-content: center;
+      margin-top: 6.3rem;
+      min-width: 100vw;
+      height: 39.2rem;
+      gap: 4rem;
+    }
+      .aboutContent {
+          margin-top: 1.8rem;
+          width: 27.5rem;
+      }
+      .aboutContent > h1 {
+        font-family: Markazi;
+        text-shadow: 2px;
+        color: #495E57;
+      }
+      .aboutContent > h2 {
+        font-family: Markazi;
+        margin-bottom: 3.1rem;
+      }
+      .aboutContent > p {
+        font-family: Karla;
+      }
+      .aboutImage {
+        position: relative;
+        width: 30rem;
+        height: 27rem;
+      }
+      .aboutImage > img {
+        width: 19.5rem;
+        height: 19rem;
+      }
+        .owner1 {
+          position: relative;
+          z-index: 2;
+          top: 30%;
+          object-fit: cover;
+          border-radius: 1rem;
+        }
+        .owner2 {
+          position: absolute;
+          z-index: 1;
+          top: 0;
+          right: 0;
+          object-fit: cover;
+          border-radius: 1rem;
+        }
 
 footer {
   grid-area: footer;
   display: flex;
-  padding: 10px;
-  background-color: grey;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  gap: 9rem;
+  background-color: #495E57;
+}
+  footer > img {
+    width: 9.4rem;
+    height: 16.3rem;
+  }
+   .linksContainer{
+    display: flex;
+    flex-direction: row;
+    gap: 9rem;
+   }
+   .footerlinks > ul{
+     display: flex;
+     flex-direction: column;
+     font-family: Inika;
+     font-weight: lighter;
+     text-align: left;
+     font-size: 1.2rem;
+     color: white;
+   }
+   .footerlinks > ul > li > a{
+    color: white;
+   }
+   .footerlinks > ul > li {
+    color: white;
+   }
+   .footerlinks > h1 {
+    font-family: Inika;
+    text-align: left;
+    font-weight: lighter;
+    padding: 10px;
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+    color: white;
+   }
+
+@media (max-width:598px){
+  .testimonialsContainer{
+    padding-bottom: 5rem;
+  }
+  footer {
+    flex-direction: column;
+  }
+  footer > img {
+    margin-top: 1rem;
+  }
+  .specialText {
+    padding: 1rem;
+  }
+}
+
+@media (max-width:600px) {
+    h1 {
+      font-size: 3rem;
+    }
+    h2 {
+      font-size: 2rem;
+    }
+    p {
+      font-size: 1rem;
+    }
+    button {
+      font-size: 1rem;
+    }
+  .appcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav, li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  main { 
+    width: 100%;
+  }
+    .introText {
+      width: 100vw;
+    }
+    .introImg {
+      display: none;
+    }
+
+    .special {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .specialText {
+      margin-top: 2rem;
+      grid-area: text;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-inline: 1rem;
+      gap: 2.5rem;
+    }
+    .specialText > h1 {
+      font-size: 2.5rem;
+    }
+
+    .cardGrid{
+      grid-area: card;
+      display: flex;
+      flex-direction: column;
+      margin-top: 1rem;
+      gap: 7px;
+    }
+
+    .testimonialsContainer {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      margin-top: 3.8rem;
+      width: 100%;
+      height: auto;
+    }
+      .reviewCardContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .aboutContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 2rem;
+        min-width: 100vw;
+        height: auto;
+        gap: 4rem;
+      }
+        .aboutContent {
+            margin-top: 1.8rem;
+            margin: 0 4rem 0 2rem;
+            width: auto;
+        }
+        .aboutContent > h2 {
+          margin-bottom: 3.1rem;
+        }
+        .aboutImage {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          height: auto;
+          margin-bottom: 1.5rem;
+        }
+        .aboutImage > img {
+          width: 100%;
+          height: 15rem;
+        }
+          .owner1 {
+            position: static;
+            object-fit: cover;
+            border-radius: 1rem;
+          }
+          .owner2 {
+            display: none;
+          }
+
+          footer {
+            gap: 1rem;
+          }
+            footer > img {
+              width: 6rem;
+              margin-left: 0.8rem;
+              height: auto;
+            }
+             .linksContainer{
+              gap: 0;
+             }
+             .footerlinks > ul{
+               font-weight: lighter;
+             }
+             .footerlinks > ul > li > a{
+              font-size: 1rem;
+              text-align: center;
+             }
+             .footerlinks > ul > li {
+              font-size: 1rem;
+              text-align: center;
+             }
+             .footerlinks > h1 {
+              text-align: center;
+              font-weight: bolder;
+              font-size: 1rem;
+              margin: 2rem 0 0 0;
+             }
+}
+
+@media (min-width:601px) and (max-width:1025px) {
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+  button {
+    font-size: 1rem;
+  }
+.appcontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+nav {
+  margin: 1.5rem 0 1rem 0;
+}
+
+main { 
+  width: 100%;
+}
+
+    .introImg {
+      margin-top: 4.1rem;
+    }
+    .introImg > img {
+      width: 15rem;
+      height: 15rem;
+    }
+    .cardGrid{
+      grid-area: card;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+
+      margin-top: 1rem;
+      gap: 1rem;
+    }
+    .specialText {
+      margin-top: 2rem;
+      grid-area: text;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10rem;
+    }
+    .specialText > h1 {
+      font-family: Markazi;
+      font-size: 2.5rem;
+    }
+
+
+    .testimonialsContainer {
+      display: grid;
+      margin-top: 3.8rem;
+      width: 100%;
+      height: 50rem;
+      
+    }
+    .reviewCardContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .aboutContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-top: 2rem;
+      min-width: 100vw;
+      height: auto;
+      gap: 4rem;
+    }
+      .aboutContent {
+          margin-top: 1.8rem;
+          margin: 0 4rem 0 2rem;
+          width: auto;
+      }
+      .aboutContent > h2 {
+        margin-bottom: 3.1rem;
+      }
+      .aboutImage {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        margin-bottom: 1.5rem;
+      }
+      .aboutImage > img {
+        width: 100%;
+        height: 15rem;
+      }
+        .owner1 {
+          position: static;
+          object-fit: cover;
+          border-radius: 1rem;
+        }
+        .owner2 {
+          display: none;
+        }
+
+        footer {
+          gap: 1rem;
+        }
+          footer > img {
+            width: 6rem;
+            margin-left: 0.8rem;
+            height: auto;
+          }
+           .linksContainer{
+            gap: 0;
+           }
+           .footerlinks > ul{
+             font-weight: lighter;
+           }
+           .footerlinks > ul > li > a{
+            font-size: 1rem;
+            text-align: center;
+           }
+           .footerlinks > ul > li {
+            font-size: 1rem;
+            text-align: center;
+           }
+           .footerlinks > h1 {
+            text-align: center;
+            font-weight: bolder;
+            font-size: 1rem;
+            margin: 2rem 0 0 0;
+           }
 }
