@@ -1,5 +1,4 @@
 import Logo from '../assets/Logo.jpg'
-
 const navItems = [
     {
         to: "/",
@@ -14,7 +13,7 @@ const navItems = [
         title: "Menu",
     },
     {
-        to: "/",
+        to: "/booking",
         title: "Reservation",
     },
     {

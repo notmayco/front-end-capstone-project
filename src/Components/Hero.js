@@ -1,12 +1,17 @@
-import intoimg from '../assets/restaurantintroduction.jpg'
+import { useNavigate } from 'react-router-dom';
+import intoimg from '../assets/restaurantintroduction.jpg';
+
 function Hero () {
+
+    const navigate = useNavigate();
+
     return(
         <section className='hero'>
             <div className='introText'>
                 <h1>Little Lemon</h1>
                 <h2>Chicago</h2>
                 <p>We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p>
-                <button>Reserve a Table</button>
+                <button onClick={() => navigate('/booking')}>Reserve a Table</button>
             </div>
             <div className='introImg'>
                 <img src={intoimg} alt='restaurant food'/>
