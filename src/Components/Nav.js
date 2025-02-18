@@ -32,7 +32,7 @@ function Nav() {
     return (
         <>
             <header>
-            <img src={Logo} alt='logo' height={'60px'} width={'auto'}/>
+            <img src={Logo} alt='logo little lemon' height={'60px'} width={'auto'}/>
             </header>
             <nav>
                 <ul className="navList">

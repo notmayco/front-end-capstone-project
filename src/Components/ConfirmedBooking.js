@@ -11,7 +11,7 @@ function ConfirmedBooking () {
             <Nav />
             <div className="confirmationContainer">
                 <h1>Your table has been reserved!</h1>
-                <button onClick={() => navigation('/')}>Home Page</button>
+                <button onClick={() => navigation('/')} aria-label="On Click">Home Page</button>
             </div>
             <Footer />
         </div>

@@ -400,7 +400,7 @@ footer {
     justify-content: center;
     gap: 7rem;
     width: 100%;
-    margin: 3rem 0rem 2rem 0rem;
+    margin: 3rem 0rem 4rem 0rem;
     height: 30rem;
   }
   fieldset {
@@ -449,9 +449,8 @@ footer {
     width: 30rem;
     border-radius: 16px;
     height: auto;
+    margin-top: 4rem;
     object-fit: cover;
-  }
-  .confirmedPageContainer {
   }
   .confirmationContainer {
     display: flex;
@@ -469,7 +468,7 @@ footer {
       font-family: Markazi;
       text-align: center;
       color: white;
-      font-size: 4rem;
+      font-size: 3rem;
     }
     .confirmationContainer > button {
           font-family: Karla;

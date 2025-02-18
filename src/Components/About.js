@@ -9,8 +9,8 @@ function About () {
                 <p>Little Lemon is a charming neighborhood bistro that serves simple food and classic cocktails in a lively but casual environment the restaurant features a locally sourced menu with daily specials.Little Lemon is a charming neighborhood bistro that serves simple food and classic cocktails in a lively but casual environment the restaurant features a locally sourced menu with daily specials.</p>
             </div>
             <div className='aboutImage'>
-                <img src={owner1} className='owner1'/>
-                <img src={owner2} className='owner2'/>
+                <img src={owner1} className='owner1' alt='Owners of the restaurant'/>
+                <img src={owner2} className='owner2' alt='Owners of the restaurant'/>
             </div>
         </section>
     )
